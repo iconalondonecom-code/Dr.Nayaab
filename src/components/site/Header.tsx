@@ -61,7 +61,7 @@ export function Header() {
             <Link
               key={n.to}
               to={n.to}
-              className="relative rounded-md px-3 py-2 text-[0.9rem] font-medium text-brand-navy/85 transition-colors hover:text-brand-red"
+              className="relative rounded-md px-2.5 py-2 text-[0.875rem] font-medium whitespace-nowrap text-brand-navy/85 transition-colors hover:text-brand-red"
               activeOptions={{ exact: n.to === "/" }}
               activeProps={{ className: "text-brand-red" }}
             >
@@ -72,7 +72,7 @@ export function Header() {
             href={site.parentUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1 rounded-md px-3 py-2 text-[0.9rem] font-medium text-brand-navy/85 transition-colors hover:text-brand-red"
+            className="flex items-center gap-1 rounded-md px-2.5 py-2 text-[0.875rem] font-medium whitespace-nowrap text-brand-navy/85 transition-colors hover:text-brand-red"
           >
             Ronak Group
             <ExternalLink className="h-3.5 w-3.5" aria-hidden="true" />
