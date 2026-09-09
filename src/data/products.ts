@@ -216,4 +216,4 @@ export const getProduct = (slug: string) => products.find((p) => p.slug === slug
 export const productsByCategory = (slug: CategorySlug) =>
   products.filter((p) => p.category === slug);
 
-export const imgSrc = (path: string) => encodeURI(path);
+export const imgSrc = (path?: string) => encodeURI(path ?? "");
