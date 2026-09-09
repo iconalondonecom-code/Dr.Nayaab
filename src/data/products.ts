@@ -120,7 +120,7 @@ export const products: Product[] = [
     strength: "2%",
     form: "Syrup",
     category: "syrups",
-    images: [P("CARBOCISTEINE 2% SYRUP.png")],
+    images: [P("CARBOCISTEINE 2 PERCENT SYRUP.png")],
   },
   {
     slug: "carbocisteine-5-syrup",
@@ -128,7 +128,7 @@ export const products: Product[] = [
     strength: "5%",
     form: "Syrup",
     category: "syrups",
-    images: [P("CARBOCISTEINE SYRUP 5 %.png")],
+    images: [P("CARBOCISTEINE SYRUP 5 PERCENT.png")],
   },
   {
     slug: "paracetamol-caffeine-phenylephrine-chlorpheniramine-syrup",
