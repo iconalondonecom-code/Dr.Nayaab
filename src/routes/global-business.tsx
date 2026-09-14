@@ -122,7 +122,7 @@ function GlobalBusiness() {
             <h2 className="mt-5 text-3xl font-bold md:text-4xl">
               Three Simple <span className="text-brand-red">Steps</span>
             </h2>
-            <ol className="mt-8 space-y-5">
+            <ol className="mt-8 list-none space-y-5 pl-0">
               {[
                 { t: "Shortlist products", c: "Browse the portfolio and add items to your enquiry list." },
                 { t: "Send your enquiry", c: "Tell us your market, business type and requirements." },
