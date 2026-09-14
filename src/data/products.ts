@@ -210,3 +210,7 @@ export const productsByCategory = (slug: CategorySlug) =>
   products.filter((p) => p.category === slug);
 
 export const imgSrc = (path?: string) => encodeURI(path ?? "");
+
+export const visibleCategories = categories.filter(
+  (c) => products.some((p) => p.category === c.slug),
+);
