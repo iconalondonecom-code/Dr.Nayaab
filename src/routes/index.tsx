@@ -17,7 +17,7 @@ import { Reveal } from "@/components/site/Reveal";
 import { Hero } from "@/components/site/Hero";
 import { ProductCard } from "@/components/site/ProductCard";
 import { EnquiryCta, RonakSection } from "@/components/site/Sections";
-import { categories, products, rangePackshot, imgSrc } from "@/data/products";
+import { visibleCategories as categories, products, rangePackshot, imgSrc } from "@/data/products";
 import { posts } from "@/data/blog";
 import { assets, site, whatsappLink } from "@/data/site";
 

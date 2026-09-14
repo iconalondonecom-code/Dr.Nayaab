@@ -5,7 +5,7 @@ import { PageHero } from "@/components/site/PageHero";
 import { Reveal } from "@/components/site/Reveal";
 import { EnquiryForm } from "@/components/site/EnquiryForm";
 import { RonakSection } from "@/components/site/Sections";
-import { categories } from "@/data/products";
+import { visibleCategories as categories } from "@/data/products";
 import { assets } from "@/data/site";
 
 export const Route = createFileRoute("/global-business")({
