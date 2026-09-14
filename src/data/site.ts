@@ -35,8 +35,6 @@ export const businessTypes = [
 export const assets = {
   logo: "/Dr_Nayaab_Website_Assets/dr-nayaab-logo.png",
   ronakLogo: "/Dr_Nayaab_Website_Assets/ronak-group-logo.png",
-  heroDesktop: "/Dr_Nayaab_Website_Assets/dr-nayaab-01-homepage-hero-desktop.png",
-  heroMobile: "/Dr_Nayaab_Website_Assets/dr-nayaab-01-homepage-hero-mobile.png",
   portfolioDesktop: "/Dr_Nayaab_Website_Assets/dr-nayaab-02-product-portfolio-desktop.png",
   portfolioMobile: "/Dr_Nayaab_Website_Assets/dr-nayaab-02-product-portfolio-mobile.png",
   qualityDesktop: "/Dr_Nayaab_Website_Assets/dr-nayaab-03-quality-precision-desktop.png",

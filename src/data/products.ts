@@ -54,7 +54,7 @@ export const categories: Category[] = [
     image: "/Dr_Nayaab_Website_Assets/dr-nayaab-07-paediatric-nutrition-desktop.png",
     square: "/Dr_Nayaab_Website_Assets/dr-nayaab-07-paediatric-nutrition-square.png",
   },
-].filter((c) => true);
+];
 
 export const categoryName = (slug: CategorySlug) =>
   categories.find((c) => c.slug === slug)?.name ?? "";
