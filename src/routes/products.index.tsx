@@ -7,7 +7,7 @@ import { PageHero } from "@/components/site/PageHero";
 import { Reveal } from "@/components/site/Reveal";
 import { ProductCard } from "@/components/site/ProductCard";
 import { EnquiryCta } from "@/components/site/Sections";
-import { categories, products } from "@/data/products";
+import { visibleCategories as categories, products } from "@/data/products";
 
 export const Route = createFileRoute("/products/")({
   head: () => ({

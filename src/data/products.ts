@@ -2,8 +2,7 @@ export type CategorySlug =
   | "oral-suspensions"
   | "syrups"
   | "tablets"
-  | "paediatric-nutritional-care"
-  | "other";
+  | "paediatric-nutritional-care";
 
 export interface Category {
   slug: CategorySlug;
@@ -54,12 +53,6 @@ export const categories: Category[] = [
     description: "Vitamin, mineral and nutritional support presentations for everyday care ranges.",
     image: "/Dr_Nayaab_Website_Assets/dr-nayaab-07-paediatric-nutrition-desktop.png",
     square: "/Dr_Nayaab_Website_Assets/dr-nayaab-07-paediatric-nutrition-square.png",
-  },
-  {
-    slug: "other",
-    name: "Other Pharmaceutical Products",
-    description: "Additional presentations from the wider Dr. Nayaab portfolio.",
-    image: "/Dr_Nayaab_Website_Assets/dr-nayaab-02-product-portfolio-desktop.png",
   },
 ];
 
@@ -217,3 +210,7 @@ export const productsByCategory = (slug: CategorySlug) =>
   products.filter((p) => p.category === slug);
 
 export const imgSrc = (path?: string) => encodeURI(path ?? "");
+
+export const visibleCategories = categories.filter(
+  (c) => products.some((p) => p.category === c.slug),
+);

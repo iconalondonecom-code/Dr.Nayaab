@@ -4,7 +4,7 @@ import { Container } from "@/components/site/Bits";
 import { PageHero } from "@/components/site/PageHero";
 import { Reveal } from "@/components/site/Reveal";
 import { EnquiryCta } from "@/components/site/Sections";
-import { categories, productsByCategory } from "@/data/products";
+import { visibleCategories as categories, productsByCategory } from "@/data/products";
 
 export const Route = createFileRoute("/categories/")({
   head: () => ({
@@ -13,7 +13,7 @@ export const Route = createFileRoute("/categories/")({
       {
         name: "description",
         content:
-          "Browse Dr. Nayaab product categories: oral suspensions, syrups, tablets, paediatric and nutritional care, and other pharmaceutical presentations.",
+          "Browse Dr. Nayaab product categories: oral suspensions, syrups, tablets, paediatric and nutritional care.",
       },
       { property: "og:title", content: "Product Categories | Dr. Nayaab" },
       {
