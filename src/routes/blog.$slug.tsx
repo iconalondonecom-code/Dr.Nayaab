@@ -2,8 +2,10 @@ import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { Container } from "@/components/site/Bits";
 import { Reveal } from "@/components/site/Reveal";
+import { ProductCard } from "@/components/site/ProductCard";
 import { EnquiryCta } from "@/components/site/Sections";
-import { getPost, posts } from "@/data/blog";
+import { getPost, relatedPosts, type Block } from "@/data/blog";
+import { getProduct } from "@/data/products";
 
 export const Route = createFileRoute("/blog/$slug")({
   loader: ({ params }) => {
@@ -14,10 +16,14 @@ export const Route = createFileRoute("/blog/$slug")({
   head: ({ params, loaderData }) => {
     if (!loaderData) {
       return {
-        meta: [{ title: "Article unavailable | Dr. Nayaab" }, { name: "robots", content: "noindex" }],
+        meta: [
+          { title: "Article unavailable | Dr. Nayaab" },
+          { name: "robots", content: "noindex" },
+        ],
       };
     }
     const p = loaderData.post;
+    const url = `https://dr-nayaab-lab.lovable.app/blog/${params.slug}`;
     return {
       meta: [
         { title: `${p.title} | Dr. Nayaab Insights` },
@@ -25,9 +31,9 @@ export const Route = createFileRoute("/blog/$slug")({
         { property: "og:title", content: p.title },
         { property: "og:description", content: p.excerpt },
         { property: "og:type", content: "article" },
-        { property: "og:url", content: `/blog/${params.slug}` },
+        { property: "og:url", content: url },
       ],
-      links: [{ rel: "canonical", href: `/blog/${params.slug}` }],
+      links: [{ rel: "canonical", href: url }],
       scripts: [
         {
           type: "application/ld+json",
@@ -37,8 +43,22 @@ export const Route = createFileRoute("/blog/$slug")({
             headline: p.title,
             datePublished: p.date,
             articleSection: p.category,
+            description: p.excerpt,
             author: { "@type": "Organization", name: "Dr. Nayaab" },
             publisher: { "@type": "Organization", name: "Dr. Nayaab" },
+            mainEntityOfPage: url,
+          }),
+        },
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://dr-nayaab-lab.lovable.app/" },
+              { "@type": "ListItem", position: 2, name: "Insights", item: "https://dr-nayaab-lab.lovable.app/blog" },
+              { "@type": "ListItem", position: 3, name: p.title, item: url },
+            ],
           }),
         },
       ],
@@ -47,9 +67,31 @@ export const Route = createFileRoute("/blog/$slug")({
   component: BlogArticle,
 });
 
+function BlockView({ block }: { block: Block }) {
+  if (block.type === "h2")
+    return <h2 className="mt-12 text-2xl font-bold text-brand-navy md:text-3xl">{block.text}</h2>;
+  if (block.type === "h3")
+    return <h3 className="mt-8 text-xl font-semibold text-brand-navy">{block.text}</h3>;
+  if (block.type === "ul")
+    return (
+      <ul className="mt-5 space-y-3">
+        {block.items.map((i) => (
+          <li key={i} className="flex gap-3">
+            <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-red" aria-hidden="true" />
+            <span>{i}</span>
+          </li>
+        ))}
+      </ul>
+    );
+  return <p className="mt-5">{block.text}</p>;
+}
+
 function BlogArticle() {
   const { post } = Route.useLoaderData();
-  const related = posts.filter((p) => p.slug !== post.slug);
+  const related = relatedPosts(post, 3);
+  const linkedProducts = (post.relatedProducts ?? [])
+    .map((s) => getProduct(s))
+    .filter((p): p is NonNullable<typeof p> => Boolean(p));
 
   return (
     <>
@@ -77,9 +119,11 @@ function BlogArticle() {
               {post.category}
             </p>
             <h1 className="mt-4 max-w-3xl text-3xl font-extrabold md:text-5xl">{post.title}</h1>
-            <time dateTime={post.date} className="mt-5 block text-sm text-muted-foreground">
-              {post.displayDate}
-            </time>
+            <p className="mt-5 flex flex-wrap items-center gap-3 text-sm text-muted-foreground">
+              <time dateTime={post.date}>{post.displayDate}</time>
+              <span aria-hidden="true">·</span>
+              <span>{post.readMinutes} min read</span>
+            </p>
           </Container>
         </header>
 
@@ -90,20 +134,63 @@ function BlogArticle() {
             aria-hidden="true"
             className="w-full rounded-3xl border border-border object-cover"
           />
-          <div className="mx-auto mt-12 max-w-3xl space-y-6 text-base leading-relaxed text-muted-foreground md:text-lg">
-            {post.body.map((para) => (
-              <p key={para.slice(0, 32)}>{para}</p>
+          <div className="mx-auto mt-12 max-w-3xl text-base leading-relaxed text-muted-foreground md:text-lg">
+            {post.body.map((b, i) => (
+              <BlockView key={i} block={b} />
             ))}
+
+            <div className="mt-12 rounded-3xl border border-border bg-brand-mist p-7">
+              <h2 className="text-xl font-bold text-brand-navy">Continue exploring</h2>
+              <ul className="mt-4 space-y-2 text-base">
+                <li>
+                  <Link to="/products" className="font-semibold text-brand-red hover:underline">
+                    Browse the full Dr. Nayaab product portfolio
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/categories" className="font-semibold text-brand-red hover:underline">
+                    View products by category
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/global-business" className="font-semibold text-brand-red hover:underline">
+                    Distribution and partnership opportunities
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/contact" className="font-semibold text-brand-red hover:underline">
+                    Send a business enquiry
+                  </Link>
+                </li>
+              </ul>
+            </div>
           </div>
         </Container>
       </article>
+
+      {linkedProducts.length > 0 && (
+        <section className="py-16 md:py-20">
+          <Container>
+            <h2 className="text-2xl font-bold md:text-3xl">
+              Related <span className="text-brand-red">Products</span>
+            </h2>
+            <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              {linkedProducts.map((p, i) => (
+                <Reveal key={p.slug} delay={(i % 4) * 70}>
+                  <ProductCard product={p} />
+                </Reveal>
+              ))}
+            </div>
+          </Container>
+        </section>
+      )}
 
       <section className="bg-brand-mist py-20">
         <Container>
           <h2 className="text-2xl font-bold md:text-3xl">
             Related <span className="text-brand-red">Articles</span>
           </h2>
-          <div className="mt-10 grid gap-6 md:grid-cols-2">
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
             {related.map((p, i) => (
               <Reveal key={p.slug} delay={i * 80}>
                 <Link

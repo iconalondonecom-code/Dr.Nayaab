@@ -18,7 +18,7 @@ import { Hero } from "@/components/site/Hero";
 import { ProductCard } from "@/components/site/ProductCard";
 import { EnquiryCta, RonakSection } from "@/components/site/Sections";
 import { visibleCategories as categories, products, rangePackshot, imgSrc } from "@/data/products";
-import { posts } from "@/data/blog";
+import { latestPosts } from "@/data/blog";
 import { assets, site, whatsappLink } from "@/data/site";
 
 export const Route = createFileRoute("/")({
@@ -353,7 +353,7 @@ function Home() {
           </Reveal>
 
           <div className="mt-12 grid gap-6 md:grid-cols-3">
-            {posts.map((p, i) => (
+            {latestPosts(3).map((p, i) => (
               <Reveal key={p.slug} delay={i * 90}>
                 <Link
                   to="/blog/$slug"
