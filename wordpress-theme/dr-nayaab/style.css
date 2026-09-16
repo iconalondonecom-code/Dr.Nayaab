@@ -1,0 +1,34 @@
+/*
+Theme Name: Dr. Nayaab
+Theme URI: https://ronak.global
+Author: Ronak Group
+Author URI: https://ronak.global
+Description: Premium B2B pharmaceutical WordPress theme for Dr. Nayaab. Curved healing flow, futuristic medical technology, bold red medical impact and diagonal dynamic healthcare design. Catalogue and enquiry driven — no prices, cart or checkout.
+Version: 1.0
+Requires at least: 6.0
+Tested up to: 6.7
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: dr-nayaab
+Tags: business, portfolio, custom-menu, custom-logo, featured-images, translation-ready, block-styles, wide-blocks
+*/
+
+/*
+ * The compiled design system lives in assets/css/theme.css and is enqueued
+ * from functions.php. This file carries the WordPress theme header and a few
+ * editor-safe fallbacks only.
+ */
+
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  word-wrap: normal !important;
+}
