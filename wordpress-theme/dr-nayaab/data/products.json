@@ -1,0 +1,191 @@
+{
+ "categories": [
+  {
+   "slug": "oral-suspensions",
+   "name": "Oral Suspensions",
+   "description": "Reconstitutable and ready-to-use oral suspension presentations across the Dr. Nayaab portfolio.",
+   "image": "dr-nayaab-04-oral-suspensions-desktop.png",
+   "square": "dr-nayaab-04-oral-suspensions-square.png"
+  },
+  {
+   "slug": "syrups",
+   "name": "Syrups",
+   "description": "Liquid oral syrup formulations presented in professional retail-ready packaging.",
+   "image": "dr-nayaab-05-syrups-desktop.png",
+   "square": "dr-nayaab-05-syrups-square.png"
+  },
+  {
+   "slug": "tablets",
+   "name": "Tablets",
+   "description": "Blister and carton presentations of solid oral dosage products.",
+   "image": "dr-nayaab-06-tablets-desktop.png"
+  },
+  {
+   "slug": "paediatric-nutritional-care",
+   "name": "Paediatric & Nutritional Care",
+   "description": "Vitamin, mineral and nutritional support presentations for everyday care ranges.",
+   "image": "dr-nayaab-07-paediatric-nutrition-desktop.png",
+   "square": "dr-nayaab-07-paediatric-nutrition-square.png"
+  }
+ ],
+ "products": [
+  {
+   "slug": "aluminium-magnesium-simethicone-oral-suspension",
+   "name": "Aluminium, Magnesium & Simethicone Oral Suspension",
+   "form": "Oral Suspension",
+   "category": "oral-suspensions",
+   "images": [
+    "ALUMINIUM, MAGNESIUM & SIMETHICONE ORAL SUSPENSION.png"
+   ]
+  },
+  {
+   "slug": "amoxicillin-oral-suspension-bp-125mg",
+   "name": "Amoxicillin Oral Suspension BP",
+   "strength": "125 mg",
+   "form": "Oral Suspension",
+   "category": "oral-suspensions",
+   "images": [
+    "AMOXICILLIN ORAL SUSPENSION BP 125mg.png"
+   ]
+  },
+  {
+   "slug": "amoxicillin-oral-suspension-bp-250mg",
+   "name": "Amoxicillin Oral Suspension BP",
+   "strength": "250 mg",
+   "form": "Oral Suspension",
+   "category": "oral-suspensions",
+   "images": [
+    "AMOXICILLIN ORAL SUSPENSION BP 250mg.png"
+   ]
+  },
+  {
+   "slug": "erythromycin-estolate-suspension-125mg",
+   "name": "Erythromycin Estolate Suspension",
+   "strength": "125 mg",
+   "form": "Oral Suspension",
+   "category": "oral-suspensions",
+   "images": [
+    "ERYTHROMYCIN ESTOLATE SUSPENSION 125 mg.png"
+   ]
+  },
+  {
+   "slug": "metronidazole-oral-suspension-bp-125mg-5ml",
+   "name": "Metronidazole Oral Suspension BP",
+   "strength": "125 mg / 5 ml",
+   "form": "Oral Suspension",
+   "category": "oral-suspensions",
+   "images": [
+    "METRONIDAZOLE ORAL SUSPENSION BP 125mg 5ml.png"
+   ]
+  },
+  {
+   "slug": "paracetamol-oral-suspension-125mg",
+   "name": "Paracetamol Oral Suspension",
+   "strength": "125 mg",
+   "form": "Oral Suspension",
+   "category": "oral-suspensions",
+   "images": [
+    "PARACETAMOL ORAL SUSPENSION 125mg.png"
+   ]
+  },
+  {
+   "slug": "carbocisteine-2-syrup",
+   "name": "Carbocisteine Syrup",
+   "strength": "2%",
+   "form": "Syrup",
+   "category": "syrups",
+   "images": [
+    "CARBOCISTEINE 2 PERCENT SYRUP.png"
+   ]
+  },
+  {
+   "slug": "carbocisteine-5-syrup",
+   "name": "Carbocisteine Syrup",
+   "strength": "5%",
+   "form": "Syrup",
+   "category": "syrups",
+   "images": [
+    "CARBOCISTEINE SYRUP 5 PERCENT.png"
+   ]
+  },
+  {
+   "slug": "paracetamol-caffeine-phenylephrine-chlorpheniramine-syrup",
+   "name": "Paracetamol, Caffeine, Phenylephrine HCl & Chlorpheniramine Maleate Syrup",
+   "form": "Syrup",
+   "category": "syrups",
+   "images": [
+    "PARACETAMOL, CAFFEINE, PHENYLEPHRINE HCL & CHLORPHENIRAMINE MALEATE SYRUP.png"
+   ]
+  },
+  {
+   "slug": "cyproheptadine-with-vitamins-minerals-syrup",
+   "name": "Cyproheptadine with Vitamins & Minerals Syrup",
+   "form": "Syrup",
+   "packSize": "100 ml",
+   "category": "paediatric-nutritional-care",
+   "variants": "Available in multiple pack presentations",
+   "images": [
+    "CYPROHEPTADINE WITH VITAMINS & MINERALS SYRUP.png",
+    "CYPROHEPTADINE WITH VITAMINS & MINERALS SYRUP 100ml.png",
+    "CYPROHEPTADINE WITH VITAMINS & MINERALS SYRUP 2.png",
+    "CYPROHEPTADINE WITH VITAMINS & MINERALS SYRUP - LION.png"
+   ]
+  },
+  {
+   "slug": "multivitamin-syrup",
+   "name": "Multivitamin Syrup",
+   "form": "Syrup",
+   "category": "paediatric-nutritional-care",
+   "images": [
+    "MULTIVITAMIN SYRUP.png"
+   ]
+  },
+  {
+   "slug": "vitamin-b-complex-tablets",
+   "name": "Vitamin B Complex Tablets",
+   "form": "Tablet",
+   "category": "paediatric-nutritional-care",
+   "variants": "Available in multiple pack presentations",
+   "images": [
+    "VITAMIN. B COMPLEX TABLETS - RED.png",
+    "VITAMIN. B COMPLEX TABLETS - PINK.png",
+    "VITAMIN. B COMPLEX TABLETS - YELLOW.png"
+   ]
+  },
+  {
+   "slug": "cyproheptadine-with-vitamins-minerals-tablets",
+   "name": "Cyproheptadine with Vitamins & Minerals Tablets",
+   "form": "Tablet",
+   "category": "tablets",
+   "variants": "Inner and outer pack presentations available",
+   "images": [
+    "CYPROHEPTADINE WITH VITAMINS & MINERALS TABLETS.png",
+    "CYPROHEPTADINE WITH VITAMINS & MINERALS TABLETS OUTER.png",
+    "CYPROHEPTADINE WITH VITAMINS & MINERALS TABLETS INNER.png",
+    "CYPROHEPTADINE WITH VITAMINS & MINERALS TABLETS 2.png",
+    "CYPROHEPTADINE WITH VITAMINS & MINERALS TABLETS - LION.png",
+    "CYPROHEPTADINE WITH VITAMINS & MINERALS TABLETS - LION F 2.png"
+   ]
+  },
+  {
+   "slug": "diclofenac-sodium-tablets-50mg",
+   "name": "Diclofenac Sodium Tablets",
+   "strength": "50 mg",
+   "form": "Tablet",
+   "category": "tablets",
+   "variants": "Available in multiple pack presentations",
+   "images": [
+    "DICLOFENAC SODIUM TABLETS 50mg - RED.png",
+    "DICLOFENAC SODIUM TABLETS 50mg - RED OUTER.png",
+    "DICLOFENAC SODIUM TABLETS 50mg - ORANGE.png",
+    "DICLOFENAC SODIUM TABLETS 50mg - ORANGE OUTER.png",
+    "DICLOFENAC SODIUM TABLETS 50mg - PINK.png",
+    "DICLOFENAC SODIUM TABLETS 50mg - PINK OUTER.png",
+    "DICLOFENAC SODIUM TABLETS 50mg - YELLOW.png",
+    "DICLOFENAC SODIUM TABLETS 50mg - YELLOW OUTER.png",
+    "DICLOFENAC SODIUM TABLETS 50mg - WHITE.png",
+    "DICLOFENAC SODIUM TABLETS 50mg - WHITE OUTER.png"
+   ]
+  }
+ ]
+}
